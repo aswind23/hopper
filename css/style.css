@@ -1,0 +1,582 @@
+*,*:before,*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.clear{
+    zoom:1}
+.clear:before,.clear:after{
+    content:" ";
+    display:table;}
+.clear:after{
+    clear:both;}
+html,body,header,footer,section,div,span,nav,ul,ul li,a,h1,h2,h3,strong,p{
+    margin: 0px;padding: 0px;border: 0px none;
+    vertical-align: baseline; top:0px;left:0px;bottom:0px;
+    right:0px;position:relative;
+}
+html,body{
+    width:100%;height:100%;
+   font-family: 'Open Sans', sans-serif;
+}
+a,p,h2{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+header{
+    width: 250px;
+    background-color: #a88139;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    right: 0;
+    left: initial;
+    top:0;
+    display: table;
+    -webkit-transform: translateX(140%);
+    -moz-transform: translateX(140%);
+    -mz-transform: translateX(140%);
+    transform: translateX(140%);
+       -moz-transition: -webkit-transform 0.5s;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    z-index: 999;
+}
+.overlay{
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top:0;
+    z-index: 99;
+}
+.overlayVideo {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 9999999;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+}
+#divVideo {
+    position: fixed;
+    top: 100%;
+    left: 0;
+    z-index: 999999999;
+    width: 75%;
+    margin: auto;
+    right: 0;
+    margin-top: -45%;
+    padding: 10px;
+    display: none;
+}
+#divVideo video {
+    width: 100%;
+}
+.menuopen .overlay{
+    display: block;
+}
+header:before {
+    content: "";
+    position: absolute;
+    left: -75px;
+    height: 120%;
+    width: 80px;
+    top: -110px;
+    /* transform: rotate(6deg); */
+    /* box-shadow: -35px 22px 33px -15px #00000047; */
+    /* -webkit-box-shadow: -35px 22px 33px -15px #00000047; */
+    background-image: url(../images/header-border.png);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+}
+header nav{
+    display: table-cell;
+    vertical-align: middle;
+}
+header ul.side-menu > li > a {
+    text-transform: capitalize;
+    color: white;
+    font-size: 14px;
+    line-height: 20px;
+    display: block;
+    padding: 12px 40px;
+    font-weight: 300;
+}
+.hamburger-icon{
+    position: fixed;
+    z-index: 1000;
+    right: 35px;
+    top: 35px;
+    background: transparent url(../images/line-texture2.png) 50%/5px auto repeat;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    left: initial;
+}
+.hamburger-icon:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: 3px solid #fff;
+    margin-left: auto;
+    margin-right: auto;
+}
+.hamburger-icon:after {
+    content: "";
+    top: 33px;
+    display: block;
+    position: absolute;
+    width: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: 3px solid #fff;
+    margin-left: auto;
+    margin-right: auto;
+}
+.hamburger-icon:before {
+    top: 15px;
+    height: 12px;
+    border-top: 3px solid #fff;
+}
+.main.menuopen .hamburger-icon:after, 
+.main.menuopen .hamburger-icon:before {
+    border-bottom-color: white !important;
+}
+
+.main.menuopen .hamburger-icon:after, 
+.main.menuopen .hamburger-icon:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 35px;
+    left: 50%;
+    top: 23px;
+    transform: translateX(-50%) rotate(-45deg);
+    height: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    transform-origin: center center;
+    border-bottom-color: #8b8782;
+}
+.main.menuopen .hamburger-icon:before {
+    transform: translateX(-50%) rotate(45deg);
+    border-top: none;
+}
+.main{
+    width:100%;
+    height: 100%;
+}
+.main.menuopen header{
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -mz-transform: translateX(0%);
+    transform: translateX(0%);
+}
+.sliders{
+    width:100%;
+    height: 100%;
+    display: block;
+}
+.sliders > section{
+    width:100%;
+    height: 100%;
+    display: table;
+    overflow: hidden;
+    background: transparent url(../images/brewery-main-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    
+}
+.layer{
+    display: block;
+    width:100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top:0;
+}
+.layer > div{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top:0;
+    display: block;
+}
+.layer > div.right{
+    right: 0;
+    left: initial;
+    width: 50.5%;
+}
+.layer > div.left{
+    left: 0
+}
+.slider-wrapper{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: 90%;
+    margin:auto;
+    z-index: 33;
+}
+.slider .left{
+    display: table;
+     background: transparent url(../images/hero-main-bg.png);
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-origin: content-box;
+}
+.slider .right{
+     display: table;
+     background: transparent url(../images/hero-gold-bg.png);
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-origin: content-box;
+}
+.slider1 .images > img{
+    width: 800px;
+    display: block;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.slider1 img.glass{
+    width: 32%;
+    right: -150px;
+    top: 100px;
+}
+.slider .layer > div .golden{
+     position: absolute;
+     top:0;right: 0;
+     width: 100%;
+     height: 100%;
+}
+.slider1 .layer > .right:before{
+    content: "";
+     background: transparent url(../images/hero-malt.png);
+     background-size: 100%;
+     background-repeat: no-repeat;
+     position: absolute;
+     top:0;right: 0;
+     width: 100%;
+     height: 100%;
+     z-index: 1;
+}
+.slider1 .layer > .left img{
+    bottom: 0;
+    top:initial;
+    position: absolute;
+}
+.slider1 .layer > .left .hero-hops{
+    right: 30%;
+}
+.slider1 .layer > .left .hero-seeds{
+    bottom: 60px;
+    left: 0;
+}
+.slider2 .right > img{
+    position: absolute;
+}
+.slider2 .building-left{
+    position: absolute;
+    bottom: 0;
+    left: -70px;
+}
+.slider2 .building-right{
+    position: absolute;
+    bottom: 0;
+    left: initial;
+    right: -70px;
+}
+.slider2 .left,.slider3 .left{
+    background: transparent url(../images/slider2/white-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+}
+.slider2 .left > div,.slider2 .right > div{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    padding-right: 90px;
+}
+.slider2 .left > div img{
+    display: block;
+    margin:30px auto;
+}
+.slider2 .left > div img.hop-1{
+    margin-bottom: -113px;
+    margin-right: 30px;
+    margin-top: 65px;
+}
+.slider2 .right > div img.glass{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 30%;
+    top: 0;
+    bottom: 0px;
+}
+.slider2 .right > div img.yearold{
+    position: absolute;
+    left: initial;
+    right: 5%;
+    margin: auto;
+    width: 168px;
+    top: 0;
+    bottom: -105px;
+}
+.slider3 .right > div{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.slider3 .right > div .building{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top: initial;
+    width: 100%;
+}
+.slider3 .right > div .video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 10%;
+    width: 60%;
+    cursor: pointer;
+}
+.slider3 .left > div{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.slider3 .left > div > img{
+    width: 55%;
+    display: block;
+    margin: 30px auto;
+}
+.slider3 .left > div > img.hopper{
+    width: 40%;
+    left: -55px;
+    position: relative;
+    margin-top: -10px;
+}
+.slider3 .left > div > img.belgium{
+    width: 160px;
+    margin-right: 80px;
+    position: absolute;
+    right: 0;
+    bottom: -10px;
+}
+.slider3 .left > .leaf{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-left: -90px;
+}
+
+.slider4 .left,.slider5 .left{
+    background: transparent url(../images/slider4/brewmasters-white-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+}
+.slider4 .left > .bowls,.slider5 .left > .leaf{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 185px;
+    margin-top: 50px;
+}
+.slider5 .left > .leaf{
+    width: 145px;
+}
+.slider4 .left > div,
+.slider5 .left > div,
+.slider6 .left > div{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.slider4 .left > .sack,.slider5 .left > .paper{
+    position: absolute;
+    left: 0;
+    top: initial;
+    bottom: 0px;
+    width: 150px;
+    margin-bottom: 45px;
+}
+.slider4 .left > .jute,.slider5 .left > .wheat{
+    position: absolute;
+    left: initial;
+    right: 0;
+    top: initial;
+    bottom: 0px;
+    width: 200px;
+    margin-right: 65px;
+    margin-bottom: 65px;
+}
+.slider5 .left > div img.text{
+    width: 55%;
+}
+.slider5 .left > .wheat{
+    width: 120px;
+}
+.slider5 .right > .containers,
+.slider6 .right > .malt{
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    left: 0;
+}
+.slider5 .right > div,
+.slider6 .right > div{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.slider6 .left > div{
+    padding-right: 40px;
+}
+.slider5 .right > div .bottles,
+.slider6 .right > div .bottles{
+    position: relative;
+    margin: 0;
+    bottom: 0;
+    top: initial;
+    left: 0;
+    right: 0;
+    width: 70%;
+    margin-bottom: -53px;
+    z-index: 2;
+}
+.slider6 .right > div .bottles{
+    z-index: 0;
+}
+.slider6 .left .wheat{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70px;
+    margin-top: 65px;
+}
+.slider6 .left .paper,
+.slider6 .left .wheat{
+    position: absolute;
+    bottom: 0;
+    right:0;
+}
+.slider6 .left > div .text{
+    margin-top: -60px;
+}
+.slider6 .left .paper{
+   margin-bottom: 200px;
+    width: 130px;
+    margin-right: 40px;
+}
+.slider6 .left .coriander{
+    width: 40%;
+    top: initial;
+    left: initial;
+    margin-right: 26%;
+    margin-bottom: 4%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.slider7 .left .bowl{
+    position: absolute;
+    margin-top: 28%;
+    top: 0;
+    left: 0;
+    width: 87px;
+}
+.slider7 .left > div,
+.slider7 .right > div{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.slider7 .left > div img{
+    display: block;
+    margin: 30px auto;
+}
+.slider7 .left .hops{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 260px;
+}
+.slider7 .left > div img.blonde{
+    left: -55px;
+    position: relative;
+}
+.slider7 .right .plant{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.slider8 .left > div,
+.slider8 .right > div{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.slider8 .left > div > img{
+    display: block;
+    margin:30px auto;
+
+}
+.slider8 .right > img.table{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.slider8 .right > div .hopetizers{
+    position: relative;
+    z-index: 2;
+    margin-top: 25%;
+    width: 65%;
+}
+.slider8 .left .fry1{
+    left: 0;
+    position: absolute;
+    top: 0;
+    margin-top: 25%;
+    width: 50px;
+}
+.slider8 .left .passport{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 55%;
+}
+.slider8 .left .fry2{
+    position: absolute;
+    right: -80px;
+    top: 0;
+    margin-top: 50px;
+    left: initial;
+    z-index: 1;
+    width: 175px;
+}
